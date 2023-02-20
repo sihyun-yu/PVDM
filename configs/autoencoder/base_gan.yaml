@@ -1,0 +1,21 @@
+model:
+  resume: True
+  amp: True
+  base_learning_rate: 1.0e-4
+  params:
+    embed_dim: 4
+    lossconfig:
+      params:
+        disc_start: -1
+
+    ddconfig:
+      double_z: False
+      channels: 384
+      resolution: 256
+      timesteps: 16
+      skip: 1
+      in_channels: 3
+      out_ch: 3
+      num_res_blocks: 2
+      attn_resolutions: []
+      splits: 1
