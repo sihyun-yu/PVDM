@@ -14,7 +14,7 @@ Official PyTorch implementation of **["Video Probabilistic Diffusion Models in P
 </p>
 
 ### 1. Environment setup
-```
+```bash
 conda create -n pvdm python=3.8 -y
 conda activate pvdm
 pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
@@ -66,7 +66,7 @@ SkyTimelapse
 #### Autoencoder
 
 First, execute the following script:
-```
+```bash
  python main.py 
  --exp first_stage \
  --id [EXP_NAME] \
@@ -77,7 +77,7 @@ First, execute the following script:
 Then the script will automatically create the folder in `./results` to save logs and checkpoints.
 
 If the loss converges, then execute the following script:
-```
+```bash
  python main.py 
  --exp first_stage \
  --id [EXP_NAME]_gan \
@@ -88,7 +88,7 @@ If the loss converges, then execute the following script:
 ```
 
 Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASET]` is either `UCF101` or `SKY`, and `[DIRECTOTY OF PREVIOUS EXP]` is a directory for the previous script. For instance, the entire scripts for training the model on UCF-101 becomes: 
-```
+```bash
  python main.py \
  --exp first_stage \
  --id main \
@@ -109,7 +109,7 @@ You may change the model configs via modifying `configs/autoencoder`. Moreover, 
 
 #### Diffusion model
 
-```
+```bash
  python main.py \
  --exp ddpm \
  --id [EXP_NAME] \
@@ -121,7 +121,7 @@ You may change the model configs via modifying `configs/autoencoder`. Moreover, 
 ```
 
 Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASET]` is either `UCF101` or `SKY`, and `[DIRECTOTY OF PREVIOUS EXP]` is a directory of the autoencoder to be used. For instance, the entire scripts for training the model on UCF-101 becomes: 
-```
+```bash
  python main.py \
  --exp ddpm \
  --id main \
@@ -136,7 +136,7 @@ Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASE
 We will provide checkpoints with the evaluation scripts as soon as possible, once the refactoring is done.
 
 ### Citation
-```
+```bibtex
 @article{yu2023video,
   title={Video Probabilistic Diffusion Models in Projected Latent Space},
   author={Yu, Sihyun and Sohn, Kihyuk and Kim, Subin and Shin, Jinwoo},
