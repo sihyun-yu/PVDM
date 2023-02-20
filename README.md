@@ -3,7 +3,7 @@
 Official PyTorch implementation of **["Video Probabilistic Diffusion Models in Projected Latent Space"](https://arxiv.org/abs/2302.07685)**.   
 [Sihyun Yu](https://sihyun.me/)<sup>1</sup>, 
 [Kihyuk Sohn](https://sites.google.com/site/kihyuksml/)<sup>2</sup>, 
-[Subin Kim]()<sup>1</sup>, 
+[Subin Kim](https://subin-kim-cv.github.io/)<sup>1</sup>, 
 [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)<sup>1</sup>.  
 <sup>1</sup>KAIST, <sup>2</sup>Google Research  
 [paper](https://arxiv.org/abs/2302.07685) | [project page](https://sihyun.me/PVDM/)
