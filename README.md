@@ -8,6 +8,10 @@ Official PyTorch implementation of **["Video Probabilistic Diffusion Models in P
 <sup>1</sup>KAIST, <sup>2</sup>Google Research  
 [paper](https://arxiv.org/abs/2302.07685) | [project page](https://sihyun.me/PVDM/)
 
+<p align="center">
+    <img src=assets/ucf101_long.gif> 
+    <img src=assets/sky_long.gif> 
+</p>
 
 ### 1. Environment setup
 ```
@@ -147,6 +151,6 @@ It's possible that this code may not accurately replicate the results outlined i
 
 ### Reference
 This code is mainly built upon [SiMT](https://github.com/jihoontack/simt), [latent-diffusion](https://github.com/CompVis/latent-diffusionn), and [stylegan2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch) repositories.\
-We also used the code from following repositories: [StyleGAN-V](https://github.com/universome/stylegan-v), [VideoGPT](https://github.com/wilson1yan/VideoGPT) and [MDGAN](https://github.com/weixiong-ur/mdgan).
+We also used the code from following repositories: [StyleGAN-V](https://github.com/universome/stylegan-v), [VideoGPT](https://github.com/wilson1yan/VideoGPT), and [MDGAN](https://github.com/weixiong-ur/mdgan).
 
 
