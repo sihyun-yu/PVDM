@@ -1,6 +1,6 @@
 ## PVDM
 
-Official PyTorch implementation of **["Video Probabilistic Diffusion Models in Projected Latent Space"](https://openreview.net/forum?id=Czsdv-S4-w9)** by 
+Official PyTorch implementation of **["Video Probabilistic Diffusion Models in Projected Latent Space"](https://arxiv.org/abs/2302.07685)**.   
 [Sihyun Yu](https://sihyun.me/)<sup>1</sup>, 
 [Kihyuk Sohn](https://sites.google.com/site/kihyuksml/)<sup>2</sup>, 
 [Subin Kim]()<sup>1</sup>, 
