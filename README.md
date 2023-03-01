@@ -1,6 +1,6 @@
 ## PVDM
 
-Official PyTorch implementation of **["Video Probabilistic Diffusion Models in Projected Latent Space"](https://arxiv.org/abs/2302.07685)**.   
+Official PyTorch implementation of **["Video Probabilistic Diffusion Models in Projected Latent Space"](https://arxiv.org/abs/2302.07685)** (CVPR 2023).   
 [Sihyun Yu](https://sihyun.me/)<sup>1</sup>, 
 [Kihyuk Sohn](https://sites.google.com/site/kihyuksml/)<sup>2</sup>, 
 [Subin Kim](https://subin-kim-cv.github.io/)<sup>1</sup>, 
@@ -137,10 +137,10 @@ We will provide checkpoints with the evaluation scripts as soon as possible, onc
 
 ### Citation
 ```bibtex
-@article{yu2023video,
+@inproceedings{yu2023video,
   title={Video Probabilistic Diffusion Models in Projected Latent Space},
   author={Yu, Sihyun and Sohn, Kihyuk and Kim, Subin and Shin, Jinwoo},
-  journal={arXiv preprint arXiv:2302.07685},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2023}
 }
 ```
