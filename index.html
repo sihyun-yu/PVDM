@@ -10,10 +10,10 @@
 	body {
 		font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight: 300;
-		font-size: 17px;
+		max-width: 1000px;
+		font-size: 14px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 1600px;
 		color:  #666;	
 	}
 	
@@ -21,14 +21,14 @@
 		color:  #000;
 		font-size:32px;
 		font-weight:300;
-		width: 1572px;
+		width: 100%;
 	}
 
 	h2 {
 		color:  #444;	
 		font-size:27px;
 		font-weight:300;
-		width: 1572px;
+		width: 100%;
 	}
 
 	.disclaimerbox {
@@ -84,7 +84,7 @@
 	
 
 	table td {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1.15em;
 	}	
 
@@ -153,7 +153,7 @@
 	<meta property="og:video" content="Path to my video.mp4">
 	<meta property="og:title" content="Video Probabilistic Diffusion Models in Projected Latent Space" />
 	<meta property="og:description" content="We propose a novel latent diffusion model for videos." />
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src=""></script> 
@@ -167,15 +167,17 @@
 </head>
 
 <body>
-	<br>
-	<center>
-		<span style="font-size:36px; color:#000;"  width=1572px>Video Probabilistic Diffusion Models in Projected Latent Space</span>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+     <tr style="padding:0px">
+      <td style="padding:0px">
+	  <center>
+		<span style="font-size:36px; color:#000;width=100%;padding-top: 16px;line-height:1.4em;">Video Probabilistic Diffusion Models in Projected Latent Space</span>
 		<br>
 		<br>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+			<table align=center width=100%>
 				<tr>
-					<td align=center width=100px>
+					<td align=center width=100%>
 						<center>
 							<span style="font-size:24px">
 								<a href="https://sihyun.me/">Sihyun Yu</a><sup>1</sup>,
@@ -200,9 +202,9 @@
 					</td>
 				</tr>
 			</table>
-		</table>
+		</tbody></table>
 	</center><br>
-	<table align=center width=1310px>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<tr>
 			<td style="text-align:center;">
 				<b>Note:</b> If some videos are not displayed properly, try out refreshing the page!
@@ -213,9 +215,9 @@
 
 	<center><h1>Abstract</h1></center>
 	<hr>
-	<table align=center width=1310px>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<tr>
-			<td style="text-align:justify;">
+			<td style="text-align:justify;padding-left:2.5%;padding-right:2.5%;">
 				Despite the remarkable progress in deep generative models, synthesizing high-resolution and temporally coherent videos still remains a challenge due to their high-dimensionality and complex temporal dynamics along with large spatial variations. Recent works on diffusion models have shown their potential to solve this challenge, yet they suffer from severe computation- and memory-inefficiency that limit the scalability. To handle this issue, we propose a novel generative model for videos, coined projected latent video diffusion models (PVDM), a probabilistic diffusion model which learns a video distribution in a low-dimensional latent space and thus can be efficiently trained with high-resolution videos under limited resources. Specifically, PVDM is composed of two components: (a) an autoencoder that projects a given video as 2D-shaped latent vectors that factorize the complex cubic structure of video pixels and (b) a diffusion model architecture specialized for our new factorized latent space and the training/sampling procedure to synthesize videos of arbitrary length with a single model. Experiments on popular video generation datasets demonstrate the superiority of PVDM compared with previous video synthesis methods; e.g., PVDM obtains the FVD score of 639.7 on the UCF-101 long video (128 frames) generation benchmark, which improves 1773.4 of the prior state-of-the-art.		
 			</td>
 		</tr>
@@ -226,9 +228,9 @@
 	<center><h1> Main Result </h1></center>
 	<hr>
 
-	<table align=center width=1310px>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<tr>
-			<td style="text-align:center;">
+			<td style="text-align:center;padding-left:2.5%;padding-right:2.5%;">
 				<b>Note:</b> We provide both short and long videos from our method; note that short videos of baselines correspond to the consecutively subsampled 16 frames in long video examples! For a fair comparison, we use qualitative results of baselines (DIGAN and StyleGAN-V) from the official StyleGAN-V <a href="https://universome.github.io/stylegan-v">webpage</a>.
 			</td>
 		</tr>
@@ -239,50 +241,54 @@
 	<center><h2> Short video (16 frames) </h2></center>
 	<hr>
 
-	<table align=center width=1572px>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<tr>
-			<td align=center width="130" height="81">
+			<td align=center width=9%>
 				<b>PVDM (ours)</b>
 			</td>
-			<td rowspan="1" colspan="1"  width="1296" height="162">
-				<video width="1296" height="162" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+			<td rowspan="1" colspan="1"  width=80% >
+				<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
 					<source src="resources/main/ucf101_short.mp4" type="video/mp4"></video>
 				</video>
 			</td>
 			
-			<td align=center width="130">
+			<td align=center width=width=9%>
 			</td>
 		</tr>
 
 		<tr>
-			<td align=center width="130" height="60">
+			<td align=center width=9%>
 			</td>
-			<td width="1296" height="60" valign="middle" halign="middle" align="center">
+			<td width=80% valign="middle" halign="middle" align="center">
 				UCF-101
 			</td>
-			<td align=center width="130" height="60">
+			<td align=center width=9%>
 			</td>
 		</tr>	
 
 		<tr>
-			<td align=center width="130" height="81">
+			<td align=center width=9%>
 				<b>PVDM (ours)</b>
 			</td>
-			<td rowspan="1" colspan="1"  width="1296" height="162">
-				<video width="1296" height="162" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-					<source src="resources/main/sky_short.mp4" type="video/mp4">
-					</video>
-				</td>
-				<td align=center width="130">
-				</td>
+			<td rowspan="1" colspan="1"  width=80%>
+				<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+					<source src="resources/main/sky_short.mp4" type="video/mp4"></video>
+				</video>
+			</td>
+			
+			<td align=center width=width=9%>
+			</td>
 		</tr>
 
 		<tr>
-			<td align=center width="130" height="60">
+			<td align=center width=9%>
 			</td>
-			<td width="1296" height="60" valign="middle" halign="middle" align="center">SkyTimelapse</td>
-			<td align=center width="130" height="60"></td>
-		</tr>						
+			<td width=80% valign="middle" halign="middle" align="center">
+				SKY
+			</td>
+			<td align=center width=9%>
+			</td>
+		</tr>					
 	</table>
 
 
@@ -290,141 +296,147 @@
 	<center><h2> Long video (128 frames) </h2></center>
 	<hr>
 
-	<table align=center width=1572px>
+	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 		<center>
 			<tr>
-				<td align=center width="130" height="81">
-						Real
+				<td align=center width=9%>
+					Real
 				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/real_ucf101.mp4" type="video/mp4">
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/real_ucf101.mp4" type="video/mp4"></video>
 					</video>
 				</td>
-				<td align=center width="130">
+
+				<td align=center width=width=9%>
 				</td>
 			</tr>
-
 			<tr>
-				<td align=center width="130" height="81">
+				<td align=center width=9%>
 					<a href="https://openreview.net/forum?id=Czsdv-S4-w9">
 						DIGAN
-					</a>
+					</a>				
 				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/digan_ucf101.mp4" type="video/mp4">
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/digan_ucf101.mp4" type="video/mp4"></video>
 					</video>
 				</td>
-				<td align=center width="130">
+
+				<td align=center width=width=9%>
 				</td>
 			</tr>
-
 			<tr>
-				<td align=center width="130" height="81">
-					<a href="https://arxiv.org/abs/2112.14683">
-						StyleGAN-V
-					</a>
-				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/styleganv_ucf101.mp4" type="video/mp4">
-						</video>
-					</td>
-					<td align=center width="130">
-					</td>
-			</tr>
-
-			<tr>
-				<td align=center width="130" height="81">
-					<b>PVDM (ours)</b>
-				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="162">
-					<video width="1296" height="162" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/ucf101_long.mp4" type="video/mp4">
-					</video>
-				</td>
-				<td align=center width="130">
-				</td>
-			</tr>
-
-			<tr>
-				<td align=center width="130" height="60">
-				</td>
-				<td width="1296" height="60" valign="middle" halign="middle" align="center">
-					UCF-101
-				</td>
-				<td align=center width="130" height="60">
-				</td>
-			</tr>									
-
-
-			<tr>
-				<td align=center width="130" height="81">
-						Real
-				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/real_sky.mp4" type="video/mp4">
-					</video>
-				</td>
-				<td align=center width="130">
-				</td>
-			</tr>
-
-			<tr>
-				<td align=center width="130" height="81">
-					<a href="https://openreview.net/forum?id=Czsdv-S4-w9">
-						DIGAN
-					</a>
-				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/digan_sky.mp4" type="video/mp4">
-					</video>
-				</td>
-				<td align=center width="130">
-				</td>
-			</tr>
-
-			<tr>
-				<td align=center width="130" height="81">
+				<td align=center width=9%>
 					<a href="https://arxiv.org/abs/2112.14683">StyleGAN-V</a>
 				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="164">
-					<video width="1296" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/styleganv_sky.mp4" type="video/mp4">
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/styleganv_ucf101.mp4" type="video/mp4"></video>
 					</video>
 				</td>
-				<td align=center width="130">
+
+				<td align=center width=width=9%>
 				</td>
 			</tr>
 
 			<tr>
-				<td align=center width="130" height="81">
+				<td align=center width=9%>
 					<b>PVDM (ours)</b>
 				</td>
-				<td rowspan="1" colspan="1"  width="1296" height="162">
-					<video width="1296" height="162" controls controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
-						<source src="resources/main/sky_long.mp4" type="video/mp4">
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/ucf101_long.mp4" type="video/mp4"></video>
 					</video>
 				</td>
-				<td align=center width="130">
+
+				<td align=center width=width=9%>
+				</td>
+			</tr>
+
+			<tr>
+				<td align=center width=9%>
+				</td>
+				<td width=80% valign="middle" halign="middle" align="center">
+					UCF-101
+				</td>
+				<td align=center width=9%>
+				</td>
+			</tr>	
+
+			<tr>
+				<td align=center width=9%>
+					Real
+				</td>
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/real_sky.mp4" type="video/mp4"></video>
+					</video>
+				</td>
+
+				<td align=center width=width=9%>
 				</td>
 			</tr>
 			<tr>
-				<td align=center width="130" height="60"></td>
-				<td width="1296" height="60" valign="middle" halign="middle" align="center">SkyTimelapse</td>
-				<td align=center width="130" height="60"></td>
+				<td align=center width=9%>
+					<a href="https://openreview.net/forum?id=Czsdv-S4-w9">
+						DIGAN
+					</a>				
+				</td>
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/digan_sky.mp4" type="video/mp4"></video>
+					</video>
+				</td>
+
+				<td align=center width=width=9%>
+				</td>
+			</tr>
+			<tr>
+				<td align=center width=9%>
+					<a href="https://arxiv.org/abs/2112.14683">StyleGAN-V</a>
+				</td>
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/styleganv_sky.mp4" type="video/mp4"></video>
+					</video>
+				</td>
+
+				<td align=center width=width=9%>
+				</td>
+			</tr>
+
+			<tr>
+				<td align=center width=9%>
+					<b>PVDM (ours)</b>
+				</td>
+				<td rowspan="1" colspan="1"  width=80%>
+					<video controls width=100% controlsList="nodownload" autoplay muted loop playsinline style="pointer-events: none;">
+						<source src="resources/main/sky_long.mp4" type="video/mp4"></video>
+					</video>
+				</td>
+
+				<td align=center width=width=9%>
+				</td>
+			</tr>
+
+			<tr>
+				<td align=center width=9%>
+				</td>
+				<td width=80% valign="middle" halign="middle" align="center">
+					SkyTimelapse
+				</td>
+				<td align=center width=9%>
+				</td>
 			</tr>						
 		</center>
 	</table>
 
 	<center><h1>Acknowledgement</h1></center>
 	<hr>
-	<table align=center width=1310px>
+	<table align=center width=100%>
 		<tr>
-			<td style="text-align:justify;">
+			<td style="text-align:justify;padding-left:2.5%;padding-right:2.5%;">
 				SY thanks Jaehyung Kim, Jihoon Tack, and Younggyo Seo for their helpful discussions and comments.
 				SY also acknowledges <a href="https://universome.github.io/">Ivan Skorokhodov</a> for providing checkpoints and qualitative results of StyleGAN-V and other baselines.
 				This template was originally made by <a href="https://subin-kim-cv.github.io">Subin Kim</a> and <a href="https://sihyun.me">Sihyun Yu</a> for a <a href="https://subin-kim-cv.github.io/NVP">NVP</a> project.		
@@ -432,6 +444,8 @@
 		</tr>
 	</table>
 	<br>
+</td></tr>
+  </tbody></table>
 </body>
 </html>
 
