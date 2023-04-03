@@ -158,7 +158,10 @@ def test_fvd_ddpm(rank, ema_model, decoder, loader, it, logger=None):
                     break
                     x = torch.cat([x,zeros], dim=0)
                 c, real = torch.chunk(x[:k], 2, dim=1)
+                mask = (c+1).contiguous().view(c.size(0), -1) ** 2
+                mask = torch.where(mask.sum(dim=-1) > 0, 1, 0).view(-1, 1, 1)
                 c = decoder.module.extract(rearrange(c / 127.5 - 1, 'b t c h w -> b c t h w').to(device).detach())
+                c = c * mask + torch.zeros_like(c).to(c.device) * (1-mask)
                 z = diffusion_model.sample(batch_size=k, cond=c)
                 pred = decoder.module.decode_from_sample(z).clamp(-1,1).cpu()
                 pred = (1 + rearrange(pred, '(b t) c h w -> b t h w c', b=k)) * 127.5
