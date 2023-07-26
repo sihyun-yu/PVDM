@@ -113,7 +113,7 @@ You may change the model configs via modifying `configs/autoencoder`. Moreover, 
  python main.py \
  --exp ddpm \
  --id [EXP_NAME] \
- --pretrain_config configs/latent-diffusion/base.yaml \
+ --pretrain_config configs/autoencoder/base.yaml \
  --data [DATASET] \
  --first_model [AUTOENCODER DIRECTORY] 
  --diffusion_config configs/latent-diffusion/base.yaml \
@@ -125,7 +125,7 @@ Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASE
  python main.py \
  --exp ddpm \
  --id main \
- --pretrain_config configs/latent-diffusion/base.yaml \
+ --pretrain_config configs/autoencoder/base.yaml  \
  --data UCF101 \
  --first_model 'results/first_stage_main_gan_UCF101_42/model_last.pth'  
  --diffusion_config configs/latent-diffusion/base.yaml \
