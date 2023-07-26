@@ -134,10 +134,10 @@ class ViTAutoencoder(nn.Module):
         self.xt_pos_embedding = nn.Parameter(torch.randn(1, self.res//(2**self.down) + 1, ddconfig["channels"]))
         self.yt_pos_embedding = nn.Parameter(torch.randn(1, self.res//(2**self.down) + 1, ddconfig["channels"]))
 
-        self.xy_quant_attn = Transformer(ddconfig["channels"], 4, self.embed_dim, ddconfig["channels"] // 8, 512)
-        self.yt_quant_attn = Transformer(ddconfig["channels"], 4, self.embed_dim, ddconfig["channels"] // 8, 512)
-        self.xt_quant_attn = Transformer(ddconfig["channels"], 4, self.embed_dim, ddconfig["channels"] // 8, 512)
-
+        self.xy_quant_attn = Transformer(ddconfig["channels"], 4, 4, ddconfig["channels"] // 8, 512)
+        self.yt_quant_attn = Transformer(ddconfig["channels"], 4, 4, ddconfig["channels"] // 8, 512)
+        self.xt_quant_attn = Transformer(ddconfig["channels"], 4, 4, ddconfig["channels"] // 8, 512)
+                     
         self.pre_xy = torch.nn.Conv2d(ddconfig["channels"], self.embed_dim, 1)
         self.pre_xt = torch.nn.Conv2d(ddconfig["channels"], self.embed_dim, 1)
         self.pre_yt = torch.nn.Conv2d(ddconfig["channels"], self.embed_dim, 1)
