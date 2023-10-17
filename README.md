@@ -13,6 +13,27 @@ Official PyTorch implementation of **["Video Probabilistic Diffusion Models in P
     <img src=assets/sky_long.gif> 
 </p>
 
+---
+
+### FAQ
+**Q. Why is adversarial loss required?**  
+**A.** This is for perceptual compression, just like in latent diffusion in the image domain.
+
+**Q. What is the meaning of FVD in Tensorboard during training of diffusion models?**  
+**A.** It is an FVD score between 16 real videos vs. generated videos, which is very noisy and **NOT the values** for reported evaluation (which uses 2,048 videos). Thus, it is recommended to track the status of training by visualizing the quality of videos. For UCF-101, we trained the model for 850k iterations with a batch size of 64.
+
+**Q. Can PVDM be trained for text-to-video generation setup or on a more complex dataset?**  
+**A.** Due to a lack of resources, we haven't tried it. However, there are several works that use PVDM and achieve reasonable results.
+- HiP (text-to-video generation on robotics dataset) [[link](https://hierarchical-planning-foundation-model.github.io/)]
+- Seer (text-conditioned video prediction) [[link](https://openreview.net/forum?id=qHGgNyQk31)]
+
+**Q. Should I use an ema model for inference?**  
+**A.** Yes, in most cases, the ema model shows much better performance.
+
+---
+
+
+
 ### 1. Environment setup
 ```bash
 conda create -n pvdm python=3.8 -y
@@ -133,7 +154,12 @@ Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASE
 ```
 
 ### 4. Evaluation
-We will provide checkpoints with the evaluation scripts as soon as possible, once the refactoring is done.
+Due to the code refactoring, we re-trained the models upon this codebase. We provide the corresponding checkpoints in the below:
+|              | Autoencoder | Diffusion Model (400/20-s, eta=1) |
+|--------------|-------------|-----------------------------------|
+| UCF-101      | [link](https://drive.google.com/file/d/1L8l8h_SKN1BPm1P9cUhUmTsVZN0SCmqe/view?usp=drive_link)  | [link](https://drive.google.com/file/d/11EDh97-lq07xgvAx3P5KURQfrPtrcX0G/view?usp=drive_link)|
+| SkyTimelapse | [link](https://drive.google.com/file/d/1fC_mUTZnxktR8GKfUnpB6L41sI5BsDxc/view?usp=drive_link)  | [link](https://drive.google.com/file/d/10ffoqZ9Zu0jVKZHFmrQQCiX9dM7FISj9/view?usp=drive_link)|
+
 
 ### Citation
 ```bibtex
