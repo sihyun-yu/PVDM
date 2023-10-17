@@ -150,7 +150,7 @@ Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASE
  --data UCF101 \
  --first_model 'results/first_stage_main_gan_UCF101_42/model_last.pth'  
  --diffusion_config configs/latent-diffusion/base.yaml \
- --batch_size 48
+ --batch_size 64
 ```
 
 ### 4. Evaluation
