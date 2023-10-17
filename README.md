@@ -155,7 +155,7 @@ Here, `[EXP_NAME]` is an experiment name you want to specifiy (string), `[DATASE
 
 ### 4. Evaluation
 Due to the code refactoring, we re-trained the models upon this codebase. We provide the corresponding checkpoints in the below:
-|              | Autoencoder | Diffusion Model (400/20-s, eta=1) |
+|              | Autoencoder | Diffusion Model (400/400-s, eta=1) |
 |--------------|-------------|-----------------------------------|
 | UCF-101      | [link](https://drive.google.com/file/d/1L8l8h_SKN1BPm1P9cUhUmTsVZN0SCmqe/view?usp=drive_link)  | [link](https://drive.google.com/file/d/11EDh97-lq07xgvAx3P5KURQfrPtrcX0G/view?usp=drive_link)|
 | SkyTimelapse | [link](https://drive.google.com/file/d/1fC_mUTZnxktR8GKfUnpB6L41sI5BsDxc/view?usp=drive_link)  | [link](https://drive.google.com/file/d/10ffoqZ9Zu0jVKZHFmrQQCiX9dM7FISj9/view?usp=drive_link)|
