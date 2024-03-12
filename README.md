@@ -45,7 +45,7 @@ pip install natsort tqdm gdown omegaconf einops lpips pyspng tensorboard imageio
 ### 2. Dataset 
 
 #### Dataset download
-Currently, we provide experiments for the following two datasets: [UCF-101](https://www.crcv.ucf.edu/data/UCF101.php) and [SkyTimelapse](https://github.com/weixiong-ur/mdgan). Each dataset should be placed in `/data` with the following structures below; you may change the data location directory in `tools/dataloadet.py` by adjusting the variable `data_location`.
+Currently, we provide experiments for the following two datasets: [UCF-101](https://www.crcv.ucf.edu/data/UCF101.php) and [SkyTimelapse](https://github.com/weixiong-ur/mdgan). Each dataset should be placed in `/data` with the following structures below; you may change the data location directory in `tools/dataloader.py` by adjusting the variable `data_location`.
 
 #### UCF-101
 ```
